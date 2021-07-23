@@ -1,0 +1,55 @@
+<div class="container">
+  <div>
+    <img
+      width="300"
+      alt="Angular Logo"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+    />
+  </div>
+
+  <div class="sign-in-btn">
+    <button (click)="signIn('Google')">
+      <i class="fa fa-google"></i> Sign in with Google
+    </button>
+  </div>
+
+  <div class="form" *ngIf="user">
+    <h2>Information</h2>
+    <h4>Profile Picture</h4>
+    <img src="{{user.photoUrl}}" />
+    <h4>Name</h4>
+    <input class="form-input" type="text" value="{{user.name}}" />
+    <h4>Email</h4>
+    <input class="form-input" id="email" type="text" value="{{user.email}}" />
+    <h4>Age</h4>
+    <input
+      class="form-input"
+      id="age"
+      value="{{clientAge}}"
+      min="4"
+      type="number"
+      placeholder="Enter Age"
+    />
+    <h4>Language preference</h4>
+    <div class="select">
+      <select value="{{clientLang}}" name="Language" id="lang">
+        <option value="English">English</option>
+        <option value="Tamil">Tamil</option>
+        <option value="Hindi">Hindi</option>
+        <option value="Russian">Russian</option>
+      </select>
+    </div>
+    <h4>Phone Number</h4>
+    <input
+      class="form-input"
+      value="{{clientPhone}}"
+      id="num"
+      type="tel"
+      placeholder="Phone No"
+    />
+    <pre></pre>
+    <input type="checkbox" id="agree" name="Agree" value="Agree" />
+    <label for="Agree"> I agree terms and condions</label><br />
+    <button (click)="save()">Save</button>
+  </div>
+</div>
