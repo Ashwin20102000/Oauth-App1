@@ -10,7 +10,7 @@ import {
 import { AppComponent } from "./app.component";
 
 const google_oauth_client_id: string =
-  "628736819779-setnktlmkbm2lvvlbmjk1vid07vnsn4j.apps.googleusercontent.com";
+  "GOOGLE_OAUTH_CLIENT_ID_GOES_HERE";
 
 let config = new AuthServiceConfig([
   {
